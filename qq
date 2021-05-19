@@ -1,0 +1,7 @@
+checkBoxTest(){
+      this.setState({
+        check:!this.state.check
+      })
+
+
+            <CheckBox value={this.state.check} onChange={() =>this.checkBoxTest()}  style={styles.checkBox} />
