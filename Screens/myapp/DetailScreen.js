@@ -9,7 +9,7 @@ export default class DetailScreen extends Component {
   
 
   render() { 
-      const { randomImage } = this.props.route.params;
+      const { randomImage } = this.props.route.params;  
       const { message } = this.props.route.params;
 
       console.log(randomImage,message)

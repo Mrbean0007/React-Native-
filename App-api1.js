@@ -4,8 +4,8 @@ import { AppRegistry, StyleSheet, Text, TouchableOpacity, View, Button } from 'r
 import 'react-native-gesture-handler';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
-import HomeScreen from '../Screens/myapp/HomeScreen'
-import DetailScreen from '../Screens/myapp/DetailScreen'
+import HomeScreen from './Screens/myapp/HomeScreen'
+import DetailScreen from './Screens/myapp/DetailScreen'
 
 const Stack = createStackNavigator();
 export default class App extends Component {

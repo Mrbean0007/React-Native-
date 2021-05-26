@@ -27,14 +27,24 @@ const Tab = createBottomTabNavigator();
 const Stack = createStackNavigator();
 
 //fonts
-let customFonts = {
-  'Poppins-Regular': require('./assets/fonts/Poppins-Regular.ttf'),
-  'Poppins-Medium': require('./assets/fonts/Poppins-Medium.ttf'),
-};
+async function getFonts(){ 
+  await Font.loadAsync({
+  'poppins_regular': require('./assets/fonts/Poppins-Regular.ttf'),
+  'poppins_medium': require('./assets/fonts/Poppins-Medium.ttf'),
+});
+}  
 
 export  class Main extends Component {
 
+  state = {
+    fontsLoaded: false,
+    setfontsLoaded:false
+  };
+
+
+  
   render() {
+    if (this.state.fontsLoaded) {
 
       return (
             <Tab.Navigator  initialRoute ='Home' 
@@ -84,45 +94,26 @@ export  class Main extends Component {
           
 
       );
-    
-    
+    }
+    else{
+      return <AppLoading startAsync={getFonts} onFinish={()=>this.setState.fontsLoaded(true)} />;
+    }
   }
 }
 export default class App extends Component {
-  state = {
-    fontsLoaded: false,
-  };
-
-  async loadFonts() {
-    await Font.loadAsync(customFonts);
-    this.setState({ fontsLoaded: true });
-  }
-
-  componentDidMount() {
-    this.loadFonts();
-  }
-
-  
   render() {
-    if (this.state.fontsLoaded) {
-    
-      return(
-        <NavigationContainer>
-          
-          <Stack.Navigator>
-            <Stack.Screen name='Login'  component={LoginScreen}  options={{ headerShown: false}} />
-            <Stack.Screen name='Main' options={{ headerShown: false}} component={Main} />
-            <Stack.Screen name='SignUp'  component={SignUpScreen}  options={{ headerShown: false}} />
-          </Stack.Navigator>
+    return(
+      <NavigationContainer>
+        
+        <Stack.Navigator>
+          <Stack.Screen name='Login'  component={LoginScreen}  options={{ headerShown: false}} />
+          <Stack.Screen name='Main' options={{ headerShown: false}} component={Main} />
+          <Stack.Screen name='SignUp'  component={SignUpScreen}  options={{ headerShown: false}} />
+        </Stack.Navigator>
 
-        </NavigationContainer>
+      </NavigationContainer>
 
-      )
-    }
-    else{
-      return <AppLoading />;
-    }
+    )
   }
-
 
 }

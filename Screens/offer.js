@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React, { Component} from 'react';
 import { AppRegistry, StyleSheet, Text, TouchableOpacity, View, Button, TextInput } from 'react-native';
-import {Picker} from '@react-native-picker/picker';
+import {Picker} from '@react-native-picker/picker';   
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 
 
