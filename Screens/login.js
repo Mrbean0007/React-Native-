@@ -40,8 +40,7 @@ export default class LoginScreen extends Component {
                                 // value={number}
                                 placeholder="Email Address"
                                 placeholderTextColor='#D3CDDF'
-
-                                />
+                            />
 
                             {/* <Text style={styles.label}>Password</Text> */}
 
@@ -51,12 +50,11 @@ export default class LoginScreen extends Component {
                                 placeholder="Password"
                                 placeholderTextColor='#D3CDDF'
                                 secureTextEntry={true}
+                            />
 
-                                
-
-                                />
                             {/* </View>
                             <View style={styles.button }> */}
+
                             <Pressable  onPress={loginPress} style={styles.button} >
                                 <Text style={styles.buttonText}>Login</Text>
                             </Pressable>
@@ -85,8 +83,14 @@ const styles=StyleSheet.create({
         resizeMode: 'center',
         height:100,
         width:410,
-        justifyContent:'center',
-        
+        justifyContent:'center',       
+    },
+    header:{
+        flex:0.3,
+        paddingTop:30,
+        // backgroundColor:"white",
+
+      
     },
     form:{
         flex:2,
@@ -101,13 +105,6 @@ const styles=StyleSheet.create({
         paddingHorizontal:50,
         justifyContent:"center",
 
-    },
-    header:{
-        flex:0.3,
-        paddingTop:30,
-        // backgroundColor:"white",
-
-      
     },
     inputForm:{
         flex:2,
@@ -125,7 +122,7 @@ const styles=StyleSheet.create({
 
     },
     textInput:{
-        color:'#D3CDDF',
+        color:'#FFF',
         borderBottomWidth:1,
         borderBottomColor:'#A678B8',
         fontSize:14

@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 import { StatusBar } from 'expo-status-bar';
 import React, { Component} from 'react';
 import { AppRegistry, StyleSheet, Text, TouchableOpacity, View, Button, TextInput } from 'react-native';
-import {Picker} from '@react-native-picker/picker';
+import DropDownPicker from 'react-native-dropdown-picker';
 import BouncyCheckbox from "react-native-bouncy-checkbox";
 
 
@@ -26,10 +26,13 @@ export default class OfferScreen extends Component {
         <View style={styles.form}>
           <Text >Your Asking</Text>
           <Text>Select the Category to Offering</Text>
+
+         
+
           
-          <Picker style={styles.picker}
+          {/* <Picker style={styles.picker}
           selectedValue={this.state.selectedLanguage} >
-          {/* onValueChange={(itemValue, itemIndex) =>setSelectedLanguage(itemValue)} */}
+          {/* onValueChange={(itemValue, itemIndex) =>setSelectedLanguage(itemValue)} 
 
           <Picker.Item label="Select Category" value="na" />
           <Picker.Item label="Funds" value="Funds" />
@@ -37,7 +40,8 @@ export default class OfferScreen extends Component {
           <Picker.Item label="Medical" value="Medical" />
           <Picker.Item label="Clothes" value="Clothes" />
           <Picker.Item label="Scholarship" value="Scholarship" />
-          </Picker>
+          </Picker> */}
+          
 
           <View style={styles.checkbox}>
             <BouncyCheckbox size={15}
@@ -81,12 +85,9 @@ export default class OfferScreen extends Component {
               keyboardType="numeric"
             />
         </View> 
-      </View>
-      
-      
-
-    );
-  }
+      </View>  
+      );
+    }
 }
 const styles=StyleSheet.create({
   container:{

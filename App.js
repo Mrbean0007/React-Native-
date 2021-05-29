@@ -30,6 +30,9 @@ const Stack = createStackNavigator();
 let customFonts = {
   'Poppins-Regular': require('./assets/fonts/Poppins-Regular.ttf'),
   'Poppins-Medium': require('./assets/fonts/Poppins-Medium.ttf'),
+  'BerkshireSwash-Regular':require('./assets/fonts/BerkshireSwash-Regular.ttf'),
+  'NunitoSans-Regular':require('./assets/fonts/NunitoSans-Regular.ttf'),
+  'NunitoSans-SemiBold':require('./assets/fonts/NunitoSans-SemiBold.ttf'),
 };
 
 export  class Main extends Component {
@@ -77,8 +80,8 @@ export  class Main extends Component {
               }}
               
             > 
+                <Tab.Screen name="Offer" component={ OfferScreen } />
                 <Tab.Screen name="Home" component={ main }  />
-                <Tab.Screen name="Offer" component={ OfferScreen  } />
                 <Tab.Screen name="Ask" component={ askScreen } />
             </Tab.Navigator>        
           
