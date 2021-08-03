@@ -90,7 +90,6 @@ const styles=StyleSheet.create({
         paddingTop:30,
         // backgroundColor:"white",
 
-      
     },
     form:{
         flex:2,

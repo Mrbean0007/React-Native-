@@ -113,9 +113,9 @@ export default class App extends Component {
         <NavigationContainer>
           
           <Stack.Navigator>
+            <Stack.Screen name='SignUp'  component={SignUpScreen}  options={{ headerShown: false}} />
             <Stack.Screen name='Login'  component={LoginScreen}  options={{ headerShown: false}} />
             <Stack.Screen name='Main' options={{ headerShown: false}} component={Main} />
-            <Stack.Screen name='SignUp'  component={SignUpScreen}  options={{ headerShown: false}} />
           </Stack.Navigator>
 
         </NavigationContainer>

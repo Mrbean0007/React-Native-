@@ -21,7 +21,7 @@ centeredView: {
     shadowRadius: 4,
     elevation: 5
   },
-  button: {
+  button1: {
     borderRadius: 20,
     padding: 10,
     elevation: 2
